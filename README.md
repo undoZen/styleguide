@@ -38,3 +38,30 @@
 
 前面文件组织这部分提到过，引用 CSS、JS 及图片文件均使用 `/assets/` 开头的绝对路径。不使用 `@import` 引入 CSS 而只使用 `<link>` 标签，不使用不必要的 type 属性。
 
+## CSS
+
+### reset & base
+
+使用 `<link rel="stylesheet" href="/assets/css/base.css">` 这个文件包含了 [typo.css](http://typo.sofi.sh/) 作为 CSS Reset，包含了除了 normalize.css(reset 功能) 的 Bootstrap 框架，[font-awesome](http://fortawesome.github.io/Font-Awesome/) 以及 [pure.css 的网格系统](http://purecss.io/grids/)。请在此基础上开发。
+
+可以通过改变 variables.less 文件改变 base.css 的默认值，注意 base.css 只在静态文件服务器启动后第一次访问时编译，如改动过 base.less 或 variables.less，需重启静态文件服务器。
+
+### grids
+
+不使用 Bootstrap 的网格系统，使用 Pure.css 的，注意 `.pure-g` `.pure-u-*` class 名改为 `.p-g` `.p-u-*`，并且添加了 7 等分的网格（用于日历）。
+
+```html
+<div class="p-g">
+    <div class="p-u-1-5">1/5</div>
+    <div class="p-u-4-5">
+        <div class="p-g">
+            <div class="p-u-1-7">1/7</div>
+            <div class="p-u-1-7">1/7</div>
+            <div class="p-u-1-7">1/7</div>
+            <div class="p-u-1-7">1/7</div>
+            <div class="p-u-1-7">1/7</div>
+            <div class="p-u-1-7">1/7</div>
+            <div class="p-u-1-7">1/7</div>
+        </div>
+    </div>
+</div>
