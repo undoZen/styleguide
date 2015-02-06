@@ -40,6 +40,10 @@
 
 ## CSS
 
+### Less or CSS
+
+[StartKit][sk] 的静态服务器包含了即时编译 less 文件的功能，可以选择用 less 来开发 CSS，也可以直接写 css 文件。
+
 ### reset & base
 
 使用 [typo.css](http://typo.sofi.sh/) 作 CSS Reset，使用包含了除了 normalize.css (reset 功能) 的 [Bootstrap](http://v3.bootcss.com/) 作为基础框架，另外使用 [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) 以及 [Pure.css 的网格系统][pgrids]。
