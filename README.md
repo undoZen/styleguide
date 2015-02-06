@@ -71,7 +71,7 @@
 
 命名方式为小写字母、数字加连字符`-`，所有 class 除了是用于复用的功能性 class（如 `u-h20` 表示上下空 20 像素），都使用 `s-` 开头
 
-```
+```css
 .s-header {
     /* ... */
 }
@@ -82,6 +82,27 @@
     clear: both;
     height: 20px;
     overflow: hidden;
+}
+```
+
+对于从基础上衍生出来改变个别属性的，在后面加两个下划线`__`后加状态或分类名
+
+```css
+.s-loan-in-list {
+    /* 列表内投资项目基础样式 */
+}
+.s-loan-in-list__scheduled {
+    /* 针对计划中的投资项目改动的样式 */
+}
+```
+
+如果只有两个状态，状态名可以加一个 `is` 前缀
+```css
+.s-header-nav-item {
+    /* ... */
+}
+.s-header-nav-item__is-active {
+    /* ... */
 }
 ```
 
