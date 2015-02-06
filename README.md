@@ -42,9 +42,11 @@
 
 ### reset & base
 
-使用 `<link rel="stylesheet" href="/assets/css/base.css">` 这个文件包含了 [typo.css](http://typo.sofi.sh/) 作为 CSS Reset，包含了除了 normalize.css(reset 功能) 的 [Bootstrap](http://v3.bootcss.com/) 框架，[Font-Awesome](http://fortawesome.github.io/Font-Awesome/) 以及 [Pure.css 的网格系统][pgrids]。请在此基础上开发。
+使用 [typo.css](http://typo.sofi.sh/) 作 CSS Reset，使用包含了除了 normalize.css (reset 功能) 的 [Bootstrap](http://v3.bootcss.com/) 作为基础框架，另外使用 [Font-Awesome](http://fortawesome.github.io/Font-Awesome/) 以及 [Pure.css 的网格系统][pgrids]。
 
-可以通过改变 variables.less 文件改变 base.css 的默认值，注意 base.css 只在静态文件服务器启动后第一次访问时编译，如改动过 base.less 或 variables.less，需重启静态文件服务器。
+[StartKit][sk] 里已包含这些框架，请在此基础上开发。
+
+尽量不修改全局 tag 的样式，如有必要只通过改变 variables.less 文件来修改。注意 base.css 只在静态文件服务器启动后第一次访问时编译，如改动过 base.less 或 variables.less，需重启静态文件服务器。
 
 ### grids
 
@@ -107,3 +109,4 @@
 ```
 
 [pgrids]: http://purecss.io/grids/
+[sk]: https://github.com/CreditCloud/ccp2p-starter-kit
