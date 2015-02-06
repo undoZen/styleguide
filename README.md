@@ -42,13 +42,13 @@
 
 ### reset & base
 
-使用 `<link rel="stylesheet" href="/assets/css/base.css">` 这个文件包含了 [typo.css](http://typo.sofi.sh/) 作为 CSS Reset，包含了除了 normalize.css(reset 功能) 的 Bootstrap 框架，[font-awesome](http://fortawesome.github.io/Font-Awesome/) 以及 [pure.css 的网格系统](http://purecss.io/grids/)。请在此基础上开发。
+使用 `<link rel="stylesheet" href="/assets/css/base.css">` 这个文件包含了 [typo.css](http://typo.sofi.sh/) 作为 CSS Reset，包含了除了 normalize.css(reset 功能) 的 [Bootstrap](http://v3.bootcss.com/) 框架，[Font-Awesome](http://fortawesome.github.io/Font-Awesome/) 以及 [Pure.css 的网格系统][pgrids]。请在此基础上开发。
 
 可以通过改变 variables.less 文件改变 base.css 的默认值，注意 base.css 只在静态文件服务器启动后第一次访问时编译，如改动过 base.less 或 variables.less，需重启静态文件服务器。
 
 ### grids
 
-不使用 Bootstrap 的网格系统，使用 Pure.css 的，注意 `.pure-g` `.pure-u-*` class 名改为 `.p-g` `.p-u-*`，并且添加了 7 等分的网格（用于日历）。
+如果要使用等分的网格系统，请使用 [Pure.css 框架的][pgrids]，而不使用 Bootstrap 的，注意 `.pure-g` `.pure-u-*` class 名改为 `.p-g` `.p-u-*`，并且添加了 7 等分的网格（用于日历）。
 
 ```html
 <div class="p-g">
@@ -65,3 +65,24 @@
         </div>
     </div>
 </div>
+```
+
+### class 命名
+
+命名方式为小写字母、数字加连字符`-`，所有 class 除了是用于复用的功能性 class（如 `u-h20` 表示上下空 20 像素），都使用 `s-` 开头
+
+```
+.s-header {
+    /* ... */
+}
+.s-header-menu {
+    /* ... */
+}
+.u-h20 {
+    clear: both;
+    height: 20px;
+    overflow: hidden;
+}
+```
+
+[pgrids]: http://purecss.io/grids/
